@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins';
+	font-weight: 300;
+  	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+.contenedor {
+	display: grid;
+
+	grid-template:
+		'header			header   	 '          auto
+		'texto      foto       '          auto 
+    'titulo     titulo     '          auto
+    'valores    valores    '          auto
+    'texto2     texto3     '          auto 
+    'footer     footer     '          auto /
+     50%        50% ;
+}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	padding: 1.25em;
+	background: #0a1a70;
+}
+
+.header img {
+	height: 6em;
+	width: auto;
+}
+.menu {
+	display: flex;
+
+	align-items: center;
+}
+
+.menu a {
+	padding: 0.625em;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 1.2em;
+}
+
+.menu a:hover {
+	background: rgb(69, 143, 192);
+	color: #fff;
+}
+
+
+/* ---------- INICIO ----------*/
+.texto {
+  grid-area: texto;
+  color: #0a1a70;
+  padding: 5em;
+  background-color: rgb(189, 214, 247);
+  text-align: center;
+  margin-bottom: 4em;
+}
+.texto h1 {
+  padding-bottom: 1em;
+}
+.boton {
+  background-color: #0a1a70; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+  margin-top: 1em;
+  font-size: 1.1em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.boton:hover {
+  background-color: rgb(69, 143, 192);
+  color: white;
+}
+
+.foto {
+  grid-area: foto;
+  background-color: rgb(189, 214, 247);
+  margin-bottom: 4em;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- TITULO ----------*/
+.titulo {
+  grid-area: titulo;
+  color: #0a1a70;
+  text-align: center;
+  padding: 2em;
+}
+
+/* ---------- VALORES ----------*/
+.valores {
+  color: rgb(69, 143, 192);
+  grid-area: valores;
+  margin-bottom: 4em;
+  text-align: center;
+  display: grid;
+  grid-gap: 4px;
+  grid-template: 'valor1  valor2  valor3  valor4  valor5' 100% /
+                  1fr     1fr     1fr     1fr     1fr       ;
+}
+
+.valor1:hover {
+  background-color: rgb(69, 143, 192);
+  color: #fff;
+}
+.valor1 {
+  grid-area: valor1;
+  padding: 4em;
+  background-color:rgb(228, 241, 250) ; 
+}
+.valor1 i {
+  font-size: 3em;
+}
+
+.valor2:hover {
+  background-color: rgb(69, 143, 192);
+  color: #fff;
+}
+.valor2 {
+  grid-area: valor2;
+  padding: 4em;
+  background-color:rgb(228, 241, 250) ;
+}
+.valor2 i {
+  font-size: 3em;
+}
+
+.valor3:hover {
+  background-color: rgb(69, 143, 192);
+  color: #fff;
+}
+.valor3 {
+  grid-area: valor3;
+  padding: 4em;
+  background-color:rgb(228, 241, 250) ;
+}
+.valor3 i {
+  font-size: 3em;
+}
+
+.valor4:hover {
+  background-color: rgb(69, 143, 192);
+  color: #fff;
+}
+.valor4 {
+  grid-area: valor4;
+  padding: 4em;
+  background-color:rgb(228, 241, 250) ;
+}
+.valor4 i {
+  font-size: 3em;
+}
+
+.valor5:hover {
+  background-color: rgb(69, 143, 192);
+  color: #fff;
+}
+.valor5 {
+  grid-area: valor5;
+  padding: 4em;
+  background-color:rgb(228, 241, 250) ;
+}
+.valor5 i {
+  font-size: 3em;
+}
+
+/* ---------- MISION VISION ----------*/
+.texto2 {
+  grid-area: texto2;
+  text-align: center;
+  padding: 4em;
+  color: #fff;
+  background-color: #0a1a70;
+}
+.texto2 h1 {
+  padding-bottom: 0.5em;
+}
+.texto2 p {
+  padding-right: 5em;
+  padding-left: 5em;
+  font-size: 1.2em;
+}
+.texto3 {
+  grid-area: texto3;
+  text-align: center;
+  padding: 4em;
+  color: #0a1a70;
+  background-color:rgb(189, 214, 247);
+}
+.texto3 h1 {
+  padding-bottom: 0.5em;
+}
+.texto3 p {
+  padding-right: 5em;
+  padding-left: 5em;
+  font-size: 1.2em;
+}
+.texto2 i {
+  font-size: 5em;
+  margin-bottom: 0.5em;
+}
+.texto3 i {
+  font-size: 5em;
+  margin-bottom: 0.5em;
+}
+
+
+
+/* ---------- FOOTER ----------*/
+.footer {
+  grid-area: footer;
+  background-color:#0a1a70 ;
+  padding: 4em;
+  margin-top: 4em;
+  color: #fff;
+  text-align: center;
+}
+
+/*----------Desktop-----------*/
+@media (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+  .valores {
+    grid-template: 'valor1  valor2' 1fr
+                   'valor3  valor4' 1fr
+                   'valor5  valor5' 1fr / 
+                      50%     50%;
+    text-align: center;
+  }
+  .valor5 {
+    margin-left: 10em;
+    margin-right: 10em;
+  } 
+  .foto img{
+    height: 30em;
+  }
+}
+
+
+/*----------Tablet-----------*/
+@media (max-width: 768px) {
+body {
+    font-size: 16px;
+  }
+.header {
+    font-size: 0.7em;
+}
+.header img {
+  height: 6em;
+  width: auto;
+}
+.contenedor {
+	display: grid;
+
+	grid-template:
+		'header			header   	 '          auto
+		'texto      texto      '          1fr  
+    'foto       foto       '          auto
+    'titulo     titulo     '          auto
+    'valores    valores    '          auto 
+    'texto2     texto2     '          auto 
+    'texto3     texto3     '          auto 
+    'footer     footer     '          auto /
+     50%        50% ;
+}
+.foto {
+  margin-top: -5em;
+} 
+}
+  
+
+
+/*----------Smartphone-----------*/
+@media (max-width: 576px) {
+  body {
+    font-size: 13px;
+  }
+  .header {
+      font-size: 0.8em;
+  }
+  .header img {
+    height: 4.5em;
+    width: auto;
+  }
+  .foto {
+    margin-top: -5em;
+  }
+  .valores {
+    grid-template: 'valor1' 1fr
+                   'valor2' 1fr
+                   'valor3' 1fr
+                   'valor4' 1fr
+                   'valor5' 1fr / 
+                      100%;
+    text-align: center;
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+  .valor5 {
+    margin-left: -0.1em;
+    margin-right: -0.1em;
+  }
+  .footer {
+      padding: 2em;
+  }
+}

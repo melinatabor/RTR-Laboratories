@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins';
+	font-weight: 300;
+  	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+.contenedor {
+	display: grid;
+
+	grid-template:
+		'header			header   	 '          auto 
+    'titulo     titulo     '          auto
+    'mapa       texto      '          auto
+    'titulo2    titulo2    '          auto
+    'item-a     item-b     '          auto
+    'footer     footer     '          auto /
+     50%        50% ;
+}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	padding: 1.25em;
+	background: #0a1a70;
+}
+
+.header img {
+	height: 6em;
+	width: auto;
+}
+.menu {
+	display: flex;
+
+	align-items: center;
+}
+
+.menu a {
+	padding: 0.625em;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 1.2em;
+}
+
+.menu a:hover {
+	background: rgb(69, 143, 192);
+	color: #fff;
+}
+
+/* ---------- CONTENIDO ----------*/
+.titulo {
+  grid-area: titulo;
+  color: #0a1a70;
+  text-align: center;
+  padding: 3em;
+}
+.texto {
+  grid-area: texto;
+  background-color: rgb(189, 214, 247);
+  padding: 4em;
+  margin-right: 1em;
+  color: #0a1a70;
+  text-align: center;
+}
+.texto h3 {
+  padding-top: 1em;
+}
+.mapa {
+  grid-area: mapa;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* ---------- CONTACTO----------*/
+.titulo2 {
+  grid-area: titulo2;
+  color: #0a1a70;
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
+
+/* ---------- ITEM A ----------*/
+.item-a {
+  grid-area: item-a;
+  background-color: #0a1a70;
+  padding: 3em;
+  text-align: center;
+  color: #fff;
+}
+.item-a h2 {
+  padding-bottom: 3em;
+}
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redes ul li{
+  display: inline-block;
+  list-style: none;
+  width: 8em;
+  height: 6em;
+  text-align: center;
+  justify-items: center;
+  padding-left: 2em;
+}
+.redes ul li a{
+  display: block;
+  line-height: 10em;
+  background:#0a1a70;
+  color:white;
+  font-size: 4em;
+  transition: .3s;
+}
+
+.redes ul li a:hover{
+  transform: translateY(-3px) scale(1.05);
+  filter: none;
+}
+.redes ul li .facebook:hover{
+  background: #3b5999;
+}
+.redes ul li .instagram:hover{
+  background: #DD2A7B;
+}
+.redes ul li .twitter:hover{
+  background: #55acee;
+}
+
+/* ---------- ITEM B ----------*/
+.item-b {
+  grid-area: item-b;
+  background-color: rgb(69, 143, 192);
+  color: #fff;
+  text-align: center;
+  padding: 3em;
+}
+.item-b a{
+  text-decoration: none;
+  color: #0a1a70;
+  font-size: 1.5rem;
+  line-height: 10rem;
+  background-color: rgb(189, 214, 247);
+  padding: 1em;
+}
+.item-b a:hover {
+  color:white;
+  text-decoration: none;
+  background-color: #0a1a70;
+}
+
+/* ---------- FOOTER ----------*/
+.footer {
+  grid-area: footer;
+  background-color:#0a1a70 ;
+  padding: 4em;
+  margin-top: 4em;
+  color: #fff;
+  text-align: center;
+}
+
+/*----------Desktop-----------*/
+@media (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+
+/*----------Tablet-----------*/
+@media (max-width: 768px) {
+body {
+    font-size: 16px;
+  }
+.header {
+    font-size: 0.7em;
+}
+.header img {
+  height: 6em;
+  width: auto;
+}
+.contenedor {
+  display: grid;
+
+  grid-template:
+    'header			header   	 '          auto 
+    'titulo     titulo     '          auto
+    'mapa       texto      '          auto
+    'titulo2    titulo2    '          auto
+    'item-a     item-a     '          auto
+    'item-b     item-b     '          auto
+    'footer     footer     '          auto /
+     50%        50% ;
+}
+}
+  
+
+
+/*----------Smartphone-----------*/
+@media (max-width: 576px) {
+  body {
+    font-size: 13px;
+  }
+  .header {
+      font-size: 0.8em;
+  }
+  .header img {
+    height: 4.5em;
+    width: auto;
+  }
+  .texto {
+    margin: 0em;
+  }
+  .mapa {
+    margin: 0em;
+  }
+  .contenedor {
+    display: grid;
+  
+    grid-template:
+      'header			header   	 '          auto 
+      'titulo     titulo     '          auto
+      'texto      texto      '          auto
+      'mapa       mapa       '          auto
+      'titulo2    titulo2    '          auto
+      'item-a     item-a     '          auto
+      'item-b     item-b     '          auto
+      'footer     footer     '          auto /
+       50%        50% ;
+  }
+  .footer {
+      padding: 2em;
+  }
+}

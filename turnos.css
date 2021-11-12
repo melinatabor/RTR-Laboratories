@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins';
+	font-weight: 300;
+  	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+.contenedor {
+	display: grid;
+  font-family: 'Poppins';
+  font-size: 16px;
+	grid-template:
+		'header'          auto 
+    'titulo'          auto
+    'form  '          auto
+    'footer'          auto /
+     100% ;
+}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	padding: 1.25em;
+	background: #0a1a70;
+}
+
+.header img {
+	height: 6em;
+	width: auto;
+}
+.menu {
+	display: flex;
+
+	align-items: center;
+}
+
+.menu a {
+	padding: 0.625em;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 1.2em;
+}
+
+.menu a:hover {
+	background: rgb(69, 143, 192);
+	color: #fff;
+  text-decoration: none;
+}
+
+/* ---------- TITULO ----------*/
+.titulo{
+  color: #0a1a70;
+  text-align: center;
+  padding: 3em;
+  font-weight: 600;
+  grid-area: titulo;
+}
+
+/* ---------- FORM ----------*/
+.container {
+  grid-area: form;
+  text-align: center;
+  font-family: 'Poppins';
+}
+.form {
+  
+}
+
+.btn {
+  height: 6em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 15em;
+  background-color: #0a1a70;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: rgb(69, 143, 192);
+  color: #fff;
+}
+
+/* ---------- FOOTER ----------*/
+.footer {
+  grid-area: footer;
+  background-color:#0a1a70 ;
+  padding: 4em;
+  margin-top: 4em;
+  color: #fff;
+  text-align: center;
+}
+
+/*----------Desktop-----------*/
+@media (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+
+/*----------Tablet-----------*/
+@media (max-width: 768px) {
+body {
+    font-size: 16px;
+  }
+.header {
+    font-size: 0.7em;
+}
+.header img {
+  height: 6em;
+  width: auto;
+}
+}
+  
+
+
+/*----------Smartphone-----------*/
+@media (max-width: 576px) {
+  body {
+    font-size: 10px;
+  }
+  .header {
+      font-size: 0.6em;
+  }
+  .header img {
+    height: 4.5em;
+    width: auto;
+  }
+  .footer {
+      padding: 2em;
+  }
+}

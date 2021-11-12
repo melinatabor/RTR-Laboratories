@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins';
+	font-weight: 300;
+  	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+.contenedor {
+	display: grid;
+
+	grid-template:
+		'header			header   	 header     '      auto
+		'titulo     titulo     titulo     '      auto 
+    'servicio-1 foto       servicio-2 '      auto
+    'footer     footer     footer '          auto /
+     33.33%     33.33%     33.33%     ;
+}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	padding: 1.25em;
+	background: #0a1a70;
+}
+
+.header img {
+	height: 6em;
+	width: auto;
+}
+.menu {
+	display: flex;
+
+	align-items: center;
+}
+
+.menu a {
+	padding: 0.625em;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 1.2em;
+}
+
+.menu a:hover {
+	background: rgb(69, 143, 192);
+	color: #fff;
+}
+
+/* ---------- CONTENIDO ----------*/
+.titulo {
+  grid-area: titulo;
+  color: #0a1a70;
+  text-align: center;
+  padding: 3em;
+}
+
+.servicio-1 {
+  grid-area: servicio-1;
+  color: #0a1a70;
+  text-align: center;
+  background-color:rgb(189, 214, 247);
+  padding:3em;
+  font-size: 1.2em;
+}
+.servicio-1 h2 {
+  padding-bottom: 1em;
+}
+.servicio-2 {
+  grid-area: servicio-2;
+  color: #fff;
+  text-align: center;
+  padding:3em;
+  background-color:rgb(69, 143, 192) ;
+  font-size: 1.2em;
+}
+.servicio-2 h2 {
+  padding-bottom: 1em;
+}
+.foto {
+  grid-area: foto;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ---------- FOOTER ----------*/
+.footer {
+  grid-area: footer;
+  background-color:#0a1a70 ;
+  padding: 4em;
+  margin-top: 4em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: -5em;
+}
+
+/*----------Desktop-----------*/
+@media (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+
+/*----------Tablet-----------*/
+@media (max-width: 768px) {
+body {
+    font-size: 16px;
+  }
+.header {
+    font-size: 0.7em;
+}
+.header img {
+  height: 6em;
+  width: auto;
+}
+.contenedor {
+	display: grid;
+
+	grid-template:
+		'header		'      auto
+		'titulo   '      auto 
+    'servicio-1'      auto
+    'foto     '      auto
+    'servicio-2'      auto
+    'footer  '      auto /
+     100%;
+}
+}
+  
+
+
+/*----------Smartphone-----------*/
+@media (max-width: 576px) {
+  body {
+    font-size: 13px;
+  }
+  .header {
+      font-size: 0.8em;
+  }
+  .header img {
+    height: 4.5em;
+    width: auto;
+  }
+  .foto img{
+    height: 25em;
+  }
+  .footer {
+      padding: 2em;
+  }
+}

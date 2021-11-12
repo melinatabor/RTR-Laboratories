@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins';
+	font-weight: 300;
+  	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+.contenedor {
+	display: grid;
+
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(7, auto);
+	grid-template-areas:
+		'header			  header   	    header'
+		'imgprincipal	imgprincipal  imgprincipal'
+		'titulo       titulo        titulo'
+    'contenido		contenido 	  contenido'
+    'titulo2      titulo2       titulo2'
+    'article      article       article'
+		'footer	 		  footer 		    footer';
+}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	padding: 1.25em;
+	background: #0a1a70;
+}
+
+.header img {
+	height: 6em;
+	width: auto;
+}
+.menu {
+	display: flex;
+
+	align-items: center;
+}
+
+.menu a {
+	padding: 0.625em;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 1.2em;
+}
+
+.menu a:hover {
+	background: rgb(69, 143, 192);
+	color: #fff;
+}
+
+/* ---------- IMG INICIO ----------*/
+.responsive {
+    max-width: 100%;
+    height: auto;
+  }
+.img_inicio {
+    grid-area: imgprincipal;
+}
+
+/* ---------- TITULO ----------*/
+.titulo {
+    font-size: 1em;
+    color: #0a1a70;
+    text-align: center;
+    align-items: center;
+    grid-area: titulo;
+    padding: 4em;
+}
+
+/* ---------- CONTENIDO ----------*/
+.contenido {
+    grid-area:contenido;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template: 'item-a item-b' 100% / 
+                    50%     50%;
+}
+.boton {
+  background-color:  rgb(69, 143, 192); 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+  margin-top: 1em;
+  font-size: 1.1em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-weight: 600;
+}
+.boton:hover {
+  background-color:rgb(189, 214, 247);
+  color: #0a1a70;
+}
+.item-a {
+    grid-area: item-a;
+    color: #fff;
+    padding: 5em;
+    background-color: #0a1a70;
+}
+.item-a h1{
+  padding-bottom: 1em;
+}
+
+.item-b {
+    grid-area: item-b;
+}
+
+/* ---------- TITULO 2----------*/
+.titulo2 {
+    font-size: 1.2em;
+    color: #0a1a70;
+    text-align: left;
+    align-items: center;
+    grid-area: titulo2;
+    padding: 4em;
+    margin-left: -2em;
+}
+
+/* ---------- TRES ITEMS ----------*/
+.responsives {
+    max-width: 100%;
+    height: 18em;
+  }
+.article {
+    grid-area: article;
+    display: grid;
+    grid-template: 'item-1  item-2  item-3' 37.5rem /
+                    33.33%    33.33%    33.33%;
+    grid-gap: 2em;
+    text-align: center;
+    color:#0a1a70;
+}
+.item-1 {
+    grid-area: item-1;
+    background-color: rgb(189, 214, 247);
+    margin-left: 2em;
+}
+.article h3{
+    padding-top: 2em;
+}
+.article p{
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+    padding-top: 2em;
+}
+
+.item-2 {
+    grid-area: item-2;
+    background-color: rgb(189, 214, 247);
+}
+
+.item-3 {
+    grid-area: item-3;
+    background-color: rgb(189, 214, 247);
+    margin-right: 2em;
+}
+
+/* ---------- FOOTER ----------*/
+.footer {
+    grid-area: footer;
+    background-color:#0a1a70 ;
+    padding: 4em;
+    margin-top: 3em;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*----------Desktop-----------*/
+@media (max-width: 1200px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  
+  /*----------Tablet-----------*/
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  .header {
+      font-size: 0.7em;
+  }
+  .header img {
+    height: 6em;
+    width: auto;
+  }
+  .articulo.destacado {
+      grid-template-columns: 1fr;
+    }
+  .titulo {
+      font-size: 0.7em;
+  }
+  .contenedor {
+    grid-template-areas:
+    'header			  header   	   header      '
+		'imgprincipal	imgprincipal imgprincipal'
+		'titulo       titulo       titulo      '
+    'contenido		contenido 	 contenido   '
+    'titulo2      titulo2      titulo2     '
+    'article      article      article     '
+		'footer	 		  footer 		   footer      ';
+    }
+  .article {
+        grid-template: 'item-1'
+                       'item-2'
+                       'item-3';
+    }
+  .item-a {
+        font-size: 0.8em;
+        padding: 2em;
+    }
+  .responsives {
+        max-width: 100%;
+        height: 14rem;
+        width: 80%;
+      }
+  .item-1 {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  .item-2 {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  .item-3 {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+    
+}
+    
+  
+  
+  /*----------Smartphone-----------*/
+  @media (max-width: 576px) {
+    body {
+      font-size: 13px;
+    }
+    .header {
+        font-size: 0.8em;
+    }
+    .header img {
+      height: 4.5em;
+      width: auto;
+    }
+    .titulo{
+        font-size: 0.7em;
+    }
+    .contenido {
+        grid-template: 'item-a  item-a' 
+                       'item-b  item-b';
+    }
+    .article {
+        grid-template: 'item-1'
+                       'item-2'
+                       'item-3';
+        grid-gap: 3em;
+    }
+    .responsives {
+        max-width: 100%;
+        height: 14rem;
+        width: 100%;
+      }
+    .titulo2 {
+        margin:-2em;
+    }
+    .footer {
+        padding: 2em;
+    }
+  }
